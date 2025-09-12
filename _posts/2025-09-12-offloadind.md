@@ -41,8 +41,6 @@ just write it down, and it's published with a simple git push.
 This first post is a perfect example of what this blog is about: taking a complex problem—getting too many ideas out of my head—and finding a simple, effective
 solution.
 
-Assuming you have ruby install, run `gem install jekyll bundler`
-
 `cat Gemfile`
 
 ```ruby
@@ -99,6 +97,6 @@ something important ...
 {% endraw %}
 ```
 
-If you want to see how it looks like on your local machine before publishing run `bundle install` and after run `bundle exec jekyll serve` or simply push and forget when everything has been setup.
+Assuming you have ruby install, if you want to see how it looks like on your local machine before publishing run `bundle install` and after run `bundle exec jekyll serve` or simply push and forget when everything has been setup.
 
 PS1: You need to enable Jekyll in the Settings of your repository. It will create a GitHub action for deployment.
