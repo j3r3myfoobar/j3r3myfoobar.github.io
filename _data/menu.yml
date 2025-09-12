@@ -1,0 +1,7 @@
+entries:
+  - title: home
+    url: /
+  - title: about
+    url: /about
+  - title: my blog
+    post_list: true
