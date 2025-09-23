@@ -3,4 +3,7 @@ description: Emptying the mind, one article at a time
 author: Jeremy Lemaire
 email: jeremy.lemaire (@) gmail.com
 theme: no-style-please
-highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
