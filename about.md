@@ -4,6 +4,6 @@ title: about
 navigation: true
 ---
 
-# I'm J3r3my.
+# I'm J. Lemaire
 
-I am exploring cognitive offloading, one article at a time. I use this blog to empty my mind .
+A technical notebook for documenting solutions or experimentations.
