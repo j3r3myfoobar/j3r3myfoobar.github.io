@@ -9,4 +9,4 @@ navigation: true
 
 - [{{ post.title }}]({{ post.url }})
   <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-  {% endfor %}
+  {% endfor  %}
