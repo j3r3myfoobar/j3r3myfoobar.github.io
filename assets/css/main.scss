@@ -1,0 +1,28 @@
+---
+---
+
+$link-color: #333;
+$primary-color: #333;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+// Custom link colors - darker, less blue
+.archive__item-title a {
+  color: #333;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+// Previous/Next navigation buttons
+.pagination--pager {
+  color: #333 !important;
+  border-color: #333 !important;
+
+  &:hover {
+    color: #fff !important;
+    background-color: #333 !important;
+  }
+}

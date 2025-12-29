@@ -13,11 +13,24 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-include-cache
+  - jekyll-feed
 
 # Site Author
 author:
   name: "J. Lemaire"
   bio: "Emptying the mind, one article at a time"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/jeremylem"
+
+# Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/jeremylem"
+
 
 # Defaults for posts
 defaults:
