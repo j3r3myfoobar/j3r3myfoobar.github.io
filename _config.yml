@@ -1,12 +1,35 @@
 title: Cognitive offloading
 description: Emptying the mind, one article at a time
-author: Jeremy Lemaire
+author: J. Lemaire
 email: jeremy.lemaire (@) gmail.com
 url: "https://jeremylem.github.io"
-theme: "overkyll-jekyll-theme"
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "default"
+
 plugins:
+  - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-include-cache
+
+# Site Author
+author:
+  name: "J. Lemaire"
+  bio: "Emptying the mind, one article at a time"
+
+# Defaults for posts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      toc: true
+      toc_sticky: true
+      author_profile: true
+
 markdown: kramdown
 kramdown:
   input: GFM

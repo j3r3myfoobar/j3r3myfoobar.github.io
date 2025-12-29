@@ -1,7 +1,8 @@
 ---
-layout: page
-title: about
-navigation: true
+layout: single
+title: About
+permalink: /about/
+author_profile: true
 ---
 
 # I'm J. Lemaire
