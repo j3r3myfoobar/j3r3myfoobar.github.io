@@ -1,6 +1,6 @@
 title: Cognitive offloading
 description: Emptying the mind, one article at a time
-author: J. Lemaire
+author: Jeremy L.
 email: jeremy.lemaire (@) gmail.com
 url: "https://jeremylem.github.io"
 og_image: /assets/xray-brain3.png
@@ -18,7 +18,7 @@ plugins:
 
 # Site Author
 author:
-  name: "J. Lemaire"
+  name: "Jeremy L."
   bio: "Emptying the mind, one article at a time"
   links:
     - label: "GitHub"
