@@ -9,7 +9,7 @@ In my [previous post about building a Local Knowledge Base MCP Server](/2025-10-
 
 The stack was: ChromaDB for vectors, rank-bm25 Python library for keyword search, custom fusion logic to merge results.
 
-That stack just became simpler.  I discovered two PostgreSQL extensions can handle both pieces.
+That stack just became simpler. I discovered two PostgreSQL extensions can handle both pieces.
 
 ## The Old Architecture
 
@@ -58,7 +58,7 @@ BM25 solves four problems:
 - **Length Normalization**: A focused 15-word answer beats a 80-word doc that mentions your query in passing.
 - **Ranked Retrieval**: Every result gets a meaningful score, not just match/no-match.
 
-BM25 is the algorithm powering Elasticsearch and Apache Lucene. 
+BM25 is the algorithm powering Elasticsearch and Apache Lucene.
 
 ## The Extensions
 
@@ -72,14 +72,14 @@ These are not built into PostgreSQL core. They are extensions you install separa
 
 Here's how they compare:
 
-| Aspect | ChromaDB | pgvector |
-|--------|----------|----------|
-| **Type** | Standalone vector database | PostgreSQL extension |
-| **Best for** | Prototyping, up in 5 minutes | Production, existing PostgreSQL stack |
-| **Concurrency** | Degrades under load | Handles concurrent queries well |
-| **SQL joins** | Separate data store, needs sync | Native joins with relational data |
-| **ACID** | No | Full transactions |
-| **Scaling** | Purpose-built for vectors | PostgreSQL scaling patterns |
+| Aspect          | ChromaDB                        | pgvector                              |
+| --------------- | ------------------------------- | ------------------------------------- |
+| **Type**        | Standalone vector database      | PostgreSQL extension                  |
+| **Best for**    | Prototyping, up in 5 minutes    | Production, existing PostgreSQL stack |
+| **Concurrency** | Degrades under load             | Handles concurrent queries well       |
+| **SQL joins**   | Separate data store, needs sync | Native joins with relational data     |
+| **ACID**        | No                              | Full transactions                     |
+| **Scaling**     | Purpose-built for vectors       | PostgreSQL scaling patterns           |
 
 ChromaDB excels at rapid prototyping. Single queries are fast. But under concurrent load, pgvector tends to handle it better due to PostgreSQL's mature connection pooling and query optimization.
 
@@ -170,13 +170,13 @@ Tune based on your data. Technical documentation with exact terms? Bump BM25 wei
 
 ## What This Replaces
 
-| Before | After |
-|--------|-------|
-| ChromaDB | pgvector |
-| rank-bm25 (Python) | pg_search |
-| Custom fusion code | SQL CTE |
-| Two data stores | One database |
-| Sync logic | ACID transactions |
+| Before             | After                             |
+| ------------------ | --------------------------------- |
+| ChromaDB           | pgvector                          |
+| rank-bm25 (Python) | pg_search                         |
+| Custom fusion code | SQL CTE (Common Table Expression) |
+| Two data stores    | One database                      |
+| Sync logic         | ACID transactions                 |
 
 ## Operational Simplicity
 
